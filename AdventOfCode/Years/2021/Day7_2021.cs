@@ -2,7 +2,7 @@
 
 public class Day7_2021
 {
-  public static void Run()
+  public static void Start()
   {
     Console.WriteLine("Ingresa tu rompecabezas");
     var input = new List<int>();
@@ -15,7 +15,7 @@ public class Day7_2021
         break;
       }
 
-      var nums = linea.Split(',').Select(x => Int32.Parse(x)).ToList();
+      var nums = linea.Split(',').Select(int.Parse).ToList();
       input = nums;
     }
 
@@ -47,7 +47,7 @@ public class Day7_2021
   {
     var fuelCost = new List<int>();
 
-    for (int i = 1; i <= rompecabezas.Count; i++)
+    for (var i = 1; i <= rompecabezas.Count; i++)
     {
       var costPerPosition = 0;
 
